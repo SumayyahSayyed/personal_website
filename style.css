@@ -304,7 +304,6 @@ header {
 }
 
 .grid-container-style ul li {
-    /* color: white; */
     font-weight: 600;
     padding: 2px 5px;
     background-color: #ebf1ff;
@@ -312,10 +311,12 @@ header {
 }
 
 
-
-.grid-container-style:nth-of-type(4) ul li .new_tab {
+.grid-container-style:nth-of-type(5) ul li .new_tab,
+.grid-container-style:nth-of-type(3) a .new_tab,
+.grid-container-style:nth-of-type(2) a .new_tab {
     width: 15px;
     height: 15px;
+    margin: 0 .5em;
 }
 
 .grid-container-projects {
@@ -326,7 +327,8 @@ header {
         'two'
         'three'
         'four'
-        'five';
+        'five'
+        'six';
 
     /* grid-template-columns: repeat(4, 1fr); */
     gap: 1.5em;
@@ -343,7 +345,9 @@ header {
 } */
 
 .grid-container-style:nth-of-type(4) h3,
-.grid-container-style:nth-of-type(4) p {
+.grid-container-style:nth-of-type(4) p,
+.grid-container-style:nth-of-type(5) h3,
+.grid-container-style:nth-of-type(5) p {
     color: #2d2e32;
 }
 
@@ -359,16 +363,21 @@ header {
 
 .grid-container-style:nth-of-type(3) {
     grid-area: three;
-    background-color: rgba(129, 129, 129, 0.9);
+    background-color: #2E3135;
 }
 
 .grid-container-style:nth-of-type(4) {
     grid-area: four;
+    background-color: rgba(169, 169, 169, 0.473);
+}
+
+.grid-container-style:nth-of-type(5) {
+    grid-area: five;
     background-color: white;
 }
 
 .grid-container-style:last-child {
-    grid-area: five;
+    grid-area: six;
     background-color: #456ebf;
 }
 
@@ -384,7 +393,6 @@ header {
 
 .end p {
     color: white;
-
 }
 
 .end .socials {
@@ -403,18 +411,20 @@ header {
     .grid-container-projects {
         grid-template-areas:
             'one one'
-            'two five'
-            'three five'
-            'four four';
+            'two six'
+            'three six'
+            'four five';
     }
 }
 
 @media (min-width: 1200px) {
     .grid-container-projects {
         grid-template-areas:
-            'one one two five'
-            'three four four five';
+            'one one two three'
+            'one one two six'
+            'four five five six';
     }
+
 }
 
 @media(min-width:1000px) {
