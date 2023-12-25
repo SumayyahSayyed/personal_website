@@ -155,7 +155,9 @@ header {
 #ul {
     padding: 0 2em;
     display: flex;
+    flex-wrap: wrap;
     gap: 1.5em;
+    max-width: 700px;
 }
 
 .ul li img {
@@ -167,6 +169,28 @@ header {
     box-shadow: 2px 2px 5px #dbdbdb, -2px -2px 5px #dbdbdb;
     border-radius: 50%;
 
+}
+
+/*  ----------- Tool tip  ----------- */
+
+.hover-text {
+    padding: .5em;
+
+}
+
+.tooltip-text {
+    display: none;
+    position: absolute;
+    background-color: #192733;
+    border-radius: 5px;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    width: 100px;
+}
+
+.hover-text:hover .tooltip-text {
+    display: block;
 }
 
 /*  ----------- About Me  ----------- */
@@ -181,11 +205,9 @@ header {
 
 .about-me {
     padding: 3em;
-
     display: flex;
     align-items: center;
     justify-content: center;
-    /* height: 100vh; */
     gap: 6em;
 }
 
@@ -270,6 +292,7 @@ header {
 
 /*  ----------- Projects  ----------- */
 .projects {
+    min-height: 100vh;
     background-color: #e0e0e056;
     padding: 3em;
 }
@@ -329,21 +352,8 @@ header {
         'four'
         'five'
         'six';
-
-    /* grid-template-columns: repeat(4, 1fr); */
     gap: 1.5em;
 }
-
-/* .grid-col-span-2 {
-    grid-column: span 2;
-}
-
-.grid-container-style:last-child {
-    grid-column: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
-} */
-
 .grid-container-style:nth-of-type(4) h3,
 .grid-container-style:nth-of-type(4) p,
 .grid-container-style:nth-of-type(5) h3,
@@ -407,7 +417,7 @@ header {
 
 /* ----------- Media Queries ----------- */
 
-@media (min-width: 650px) {
+@media (min-width: 930) {
     .grid-container-projects {
         grid-template-areas:
             'one one'
@@ -417,7 +427,7 @@ header {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width:1300px) {
     .grid-container-projects {
         grid-template-areas:
             'one one two three'
