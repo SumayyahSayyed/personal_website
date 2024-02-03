@@ -354,6 +354,7 @@ header {
         'six';
     gap: 1.5em;
 }
+
 .grid-container-style:nth-of-type(4) h3,
 .grid-container-style:nth-of-type(4) p,
 .grid-container-style:nth-of-type(5) h3,
@@ -512,6 +513,13 @@ header {
     .nav-element-right {
         display: none;
     }
+}
+
+@media (max-width: 700px) {
+    #ul {
+        justify-content: center;
+    }
+
 }
 
 @media(max-width:660px) {
