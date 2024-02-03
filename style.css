@@ -518,6 +518,7 @@ header {
 @media (max-width: 700px) {
     #ul {
         justify-content: center;
+        gap: 1em
     }
 
 }
