@@ -25,14 +25,22 @@ a {
 }
 
 /*  ----------- Nav Element  ----------- */
+.nav-box {
+    box-shadow: 1px 1px 7px rgba(146, 146, 146, 0.543);
+}
+
 .nav-element {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     padding: 1.5em 3em;
-    box-shadow: 1px 1px 7px rgba(146, 146, 146, 0.543);
     font-weight: 600;
+
+    max-width: 1580px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .nav-element-right {
@@ -61,18 +69,32 @@ a {
     background-color: #56565a29;
 }
 
+/*  ----------- Main ----------- */
+/* .main-box {
+    max-width: 1580px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
 /*  ----------- Header  ----------- */
 
+.header-box {
+    background-color: #e0e0e056;
+
+}
+
 header {
-    /* height: 100vh; */
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 3em;
 
-    padding: 0 5em;
-    background-color: #e0e0e056;
+
+
+    max-width: 1580px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #hamburger-icon {
@@ -98,23 +120,23 @@ header {
 
     position: absolute;
     z-index: 1;
-    top: 0;
-    right: -40px;
+    top: 6px;
+    right: -15px;
 }
 
 .header-right div:nth-last-of-type(2) {
     width: 150px;
     height: 150px;
-    top: -100px;
-    right: 0;
+    top: -87px;
+    right: 22px;
     opacity: 70%;
 }
 
 .header-right div:nth-last-of-type(3) {
-    width: 150px;
-    height: 150px;
-    top: 170px;
-    right: 200px;
+    width: 170px;
+    height: 170px;
+    top: 213px;
+    right: 275px;
     opacity: 70%;
 }
 
@@ -148,7 +170,7 @@ header {
 .tech-stack label {
     font-size: 20px;
     font-weight: 500;
-    padding: .5rem 1rem;
+    padding: .5rem 1rem .5rem 0rem;
     border-right: 1px solid #2d2e32;
 }
 
@@ -209,6 +231,10 @@ header {
     align-items: center;
     justify-content: center;
     gap: 6em;
+
+    max-width: 1580px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-me-left {
@@ -258,7 +284,11 @@ header {
 /*  ----------- Contact  ----------- */
 
 .contact {
-    padding: 3em 5em;
+    padding: 3em;
+
+    max-width: 1580px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact h3 {
@@ -291,9 +321,18 @@ header {
 }
 
 /*  ----------- Projects  ----------- */
-.projects {
-    min-height: 100vh;
+
+.project-box {
     background-color: #e0e0e056;
+}
+
+.projects {
+    /* min-height: 100vh; */
+
+    max-width: 1580px;
+    margin-left: auto;
+    margin-right: auto;
+
     padding: 3em;
 }
 
@@ -393,13 +432,20 @@ header {
 }
 
 /* -----------  Footer  ----------- */
-.end {
+.footer-box {
     background-color: #2d2e32;
+}
+
+.end {
     padding: 2em 3em;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    max-width: 1580px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .end p {
@@ -440,11 +486,14 @@ header {
 
 @media(min-width:1000px) {
     .about-me {
-        height: 100vh;
+        padding: 15em 3em;
+        max-height: 100vh;
     }
 
     header {
-        height: 100vh;
+        max-height: 100vh;
+        padding: 9em 3em;
+
     }
 
     .about-me-right {
@@ -470,6 +519,9 @@ header {
 
     header {
         flex-wrap: wrap;
+        /* min-height: 100vh; */
+        padding: 6em 1em;
+        justify-content: center;
     }
 
     .header-left {
